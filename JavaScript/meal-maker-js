@@ -1,0 +1,106 @@
+const menu = {
+//courses stored in arrays
+  _courses: {
+    appetizers: [],
+    mains: [],
+    desserts: []
+  },
+
+  //appetizers getter/setter
+  get appetizers(){
+    return Object.entries(this.appetizers)
+  }, 
+  set setAppetizers(appetizerNew){
+    this.appetizers.push(appetizerNew);
+  },
+
+  //mains getter/setter
+  get mains(){
+    return Object.entries(this.mains)
+  }, 
+  set setMains(mainsNew){
+    this.mains.push(mainsNew);
+  },
+
+  //desserts getter/setter
+  get setDesserts(){
+    return Object.entries(this.dessert)
+  }, 
+  set setDesserts(dessertNew){
+    this.dessert.push(dessertNew);
+  },
+
+  //courses getter
+  get courses() {
+    return{
+      appetizers: this.appetizers,
+      mains: this.mains,
+      desserts: this.desserts
+    }
+  },
+
+  //add new dish method
+  addDishToCourse(courseName, dishName, dishPrice){
+    const dish = {
+      name: dishName,
+      price: dishPrice
+    };
+    return this._courses[courseName].push(dish);
+    /*if (courseName === 'appetizers'){
+        this.setAppetizers(dish);
+    } else if (courseName === 'mains'){
+        this.setMain(dish);
+    } else if(courseName === 'desserts'){
+        this.setDesserts(dish);
+    }*/
+  },
+
+  //pick random dish
+  getRandomDishFromCourse(courseName){
+    const dishes = this._courses[courseName];
+    const randIndex = Math.floor(Math.random() * dishes.length);
+    return dishes[randIndex];
+  },
+
+  //generate random meal
+  generateRandomMeal() {
+    const randAppetizer = this.getRandomDishFromCourse('appetizers');
+    const randMain = this.getRandomDishFromCourse('mains');
+    const randDessert = this.getRandomDishFromCourse('desserts');
+    const totalPrice = randAppetizer.price + randMain.price + randDessert.price;
+    
+    //provide user with chosen random meal
+    return `Your meal consists of the following: 
+
+    Appetizer - ${randAppetizer.name}
+    Main - ${randMain.name}
+    Dessert - ${randDessert.name}
+    
+    with a total cost of £${totalPrice}`
+  }
+};
+
+
+
+//add items to menu
+menu.addDishToCourse('appetizers', 'Mozzerella Sticks', 4.99);
+menu.addDishToCourse('appetizers', 'Prawns', 5.99);
+menu.addDishToCourse('appetizers', 'Sharing Nachos', 8.99);
+
+menu.addDishToCourse('mains', 'Ribeye Steak', 14.99);
+menu.addDishToCourse('mains', 'Pepperoni Pizza', 10.99);
+menu.addDishToCourse('mains', 'Fish and Chips', 12.99);
+
+menu.addDishToCourse('desserts', 'Sticky Toffee Pudding', 5.49);
+menu.addDishToCourse('desserts', 'Chocolate Cake', 3.99);
+menu.addDishToCourse('desserts', 'Sundae', 6.29);
+
+
+//generate a meal
+//let meal = menu.generateRandomMeal();
+
+//display meal to console
+//console.log(meal);
+
+//above steps in one
+console.log(menu.generateRandomMeal());
