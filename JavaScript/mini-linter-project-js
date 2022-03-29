@@ -47,6 +47,7 @@ betterWords.forEach(word => {
 
 console.log('Your story has ' + sentenceCount + ' sentences');
 
+
 //betterWords array as single string
 console.log();
 console.log('Here is the improved version of your story: ');
