@@ -1,0 +1,47 @@
+//team object
+const team = {
+  _players: [
+    {firstName: 'Patrick', lastName: 'Bamford', age: 28},
+  ],
+  _games: [
+    {opponent: 'Wolves', teamPoints: 3, opponentPoints: 2 },
+  ],
+
+  get players(){
+    return this._players;
+  },
+  get games(){
+    return this._games;
+  },
+
+  addPlayer(firstName, lastName, age) {
+    const player = {
+      firstName:firstName,
+      lastName:lastName,
+      age:age
+    };
+
+    return this._players.push(player);
+  },
+
+  addGame(opponent, teamPoints, oppPoints) {
+    const game = {
+      opponent: opponent,
+      teamPoints:teamPoints,
+      opponentPoints:oppPoints
+    };
+
+    return this._games.push(game);
+  }
+};
+
+team.addPlayer('Steph', 'Curry', 28);
+team.addPlayer('Lisa', 'Leslie', 44);
+team.addPlayer('Bugs', 'Bunny', 76);
+
+team.addGame('Norwich City', 2, 1);
+team.addGame('Aston Villa', 0, 3);
+team.addGame('Leicester City', 0, 1);
+
+console.log(team._players);
+console.log(team._games);
