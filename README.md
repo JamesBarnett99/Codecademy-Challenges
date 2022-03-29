@@ -1,8 +1,7 @@
-# Codecademy Challenges
-Challenges completed through Codecademy
+# Completed Codecademy Challenges
 
 
-**Javascript (completed)**
+**Javascript**
 -------------------------------
  - **Mini linter (Word Processor)** - using Arrays, Iterators, factory functions and Functions
  - **Meal Maker** - Randomly picks 3 meals based on what is on the menu - Using Methods, Objects, Properties, 'this' keyword
