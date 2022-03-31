@@ -8,6 +8,6 @@
  - **Team Stats viewer** - simple tool manipulating data structures - Using Methods, Objects, Properties, 'this' keyword
 
 
-Currently working on _Intermediate JavaScript_
+Currently working on _Intermediate JavaScript - Classes_
 
 <img src="https://github.com/JamesBarnett99/Codecademy-Challenges/blob/main/certificates/Codecademy-js-cert-1.png" width="450">
