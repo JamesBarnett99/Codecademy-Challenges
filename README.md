@@ -11,5 +11,6 @@ Currently working on _Intermediate JavaScript_
 **Intermediate Javascript**
 ------------------------
 - **Media Library** - Multimedia organisation tool - using parent/child classes, methods, inheritance, extends, 'this' keyword, Class Constructors
+- **School Catalogue** - A digital school catalog to store schools -  using parent/child classes, methods, static methods, inheritance, extends, 'this' keyword, Class Constructors
 
 <img src="https://github.com/JamesBarnett99/Codecademy-Challenges/blob/main/certificates/Codecademy-js-cert-1.png" width="450">
