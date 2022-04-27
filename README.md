@@ -1,6 +1,6 @@
 # Completed Codecademy Challenges
 
-Currently working on _Intermediate JavaScript - Classes_
+Currently working on _Intermediate JavaScript_
 
 **Javascript**
 ------------------------
